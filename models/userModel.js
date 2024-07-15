@@ -1,5 +1,4 @@
-const mongoose = require('mongoose')
-const Schema = require("mongoose");
+import mongoose from "mongoose";
 
 const userSchema = new mongoose.Schema( //create model using schema
     {
@@ -22,6 +21,10 @@ const userSchema = new mongoose.Schema( //create model using schema
         required: true,
       },
       address: {
+        type: {},           //for multiple lines
+        required: true,
+      },
+      answer: {
         type: String,
         required: true,
       },
@@ -35,4 +38,4 @@ const userSchema = new mongoose.Schema( //create model using schema
   
 
 
-  module.exports = mongoose.model("users", userSchema);
+  export default mongoose.model("users", userSchema);

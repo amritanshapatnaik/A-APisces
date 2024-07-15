@@ -1,23 +1,33 @@
 {
-  "name": "A&APisces",
+  "name": "demo",
   "version": "20.9.0",
   "description": "fish rest api",
   "main": "server.js",
+  "type": "module",
   "scripts": {
-    "start": "node server.js"
+    "start": "node server.js",
+    "server": "nodemon server.js",
+    "demo": "npm start --prefix ./demo",
+    "dev": "concurrently \"npm run server\" \"npm run demo\""
   },
   "keywords": [],
-  "author": "Techinfoyt",
+  "author": "Amritansha Patnaik",
   "license": "MIT",
   "dependencies": {
     "bcryptjs": "^2.4.3",
+    "braintree": "^3.23.0",
     "colors": "^1.4.0",
+    "concurrently": "^8.2.2",
+    "cors": "^2.8.5",
     "dotenv": "^16.4.5",
     "env": "^0.0.2",
     "express": "^4.18.3",
+    "express-formidable": "^1.2.0",
     "jsonwebtoken": "^9.0.2",
     "mongoose": "^8.2.1",
     "morgan": "^1.10.0",
-    "nodemon": "^3.1.0"
+    "nodemon": "^3.1.0",
+    "react-icons": "^5.0.1",
+    "slugify": "^1.6.6"
   }
 }
